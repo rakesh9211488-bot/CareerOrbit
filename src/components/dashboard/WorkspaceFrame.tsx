@@ -1,0 +1,5 @@
+import type {ReactNode} from 'react';
+import Link from 'next/link';
+import {ShieldCheck,ArrowUpRight} from 'lucide-react';
+import {Sidebar} from './Sidebar';
+export function WorkspaceFrame({name,email,title,kicker,description,children}:{name:string;email:string;title:string;kicker:string;description:string;children:ReactNode}){return <div className="workspace-shell"><a className="skip-link" href="#main-content">Skip to content</a><Sidebar userName={name} userEmail={email}/><main className="workspace-main" id="main-content"><header className="workspace-topbar"><span>CareerOrbit <span>/</span> {title}</span><Link href="/dashboard/settings"><ShieldCheck size={15}/>Your private workspace</Link></header><div className="studio-content"><div className="studio-heading"><div><span className="section-kicker">{kicker}</span><h1>{title}</h1><p>{description}</p></div><span className="studio-orbit" aria-hidden="true"><ArrowUpRight size={28}/></span></div>{children}<footer className="workspace-footer"><span>© {new Date().getFullYear()} Rakesh Siripaka. All rights reserved.</span><span>One thoughtful application is progress.</span></footer></div></main></div>;}

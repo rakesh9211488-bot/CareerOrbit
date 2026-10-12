@@ -1,0 +1,3 @@
+ 'use client';
+import {useState} from 'react';
+export function PrintDocuments({cv,letter}:{cv:string;letter:string}){const [which,setWhich]=useState('cv');return <main className="career-print"><div className="career-print-controls"><label>Document<select value={which} onChange={e=>setWhich(e.target.value)}><option value="cv">Tailored CV</option><option value="letter">Cover letter</option></select></label><button onClick={()=>window.print()}>Print / save as PDF</button><p>Review before printing. Choose “Save as PDF” in your browser’s print dialog.</p></div><pre>{which==='cv'?cv:letter}</pre></main>;}

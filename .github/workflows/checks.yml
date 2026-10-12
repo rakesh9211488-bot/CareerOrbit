@@ -1,0 +1,23 @@
+name: CareerOrbit source checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  source-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-repository.js
+      - run: node --test scripts/check-repository.test.js
+      - run: npm ci
+      - run: npm run type-check
+      - run: npm run build

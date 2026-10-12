@@ -1,0 +1,1 @@
+import {Orbit} from 'lucide-react';export function Brand({light=false}:{light?:boolean}){return <div className={`brand${light?' brand-light':''}`} aria-label="CareerOrbit"><span className="brand-mark"><Orbit size={23} strokeWidth={1.7} aria-hidden="true"/></span><span>Career<span className="brand-ai">Orbit</span><span className="brand-dot">.</span></span></div>;}
