@@ -30,4 +30,4 @@ Local workflows stop being reachable when their host is off. Always-on public op
 
 ## Deployment preparation
 
-Run npm audit and review dependency advisories. The kit preserves the working dependency versions rather than performing an untested framework upgrade. TypeScript/build checks alone do not establish production security or live-provider functionality.
+Use Node.js 22 or newer. See SECURITY-UPGRADE.md for the framework migration and verification. Run npm audit and review dependency advisories; advisories can change after a lockfile is created. TypeScript/build checks alone do not establish live-provider functionality.

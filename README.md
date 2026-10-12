@@ -26,7 +26,7 @@ Next.js · TypeScript · React · Tailwind CSS · Lucide icons · Supabase · n8
 
 ## Local setup
 
-Use Node.js 22 or a runtime compatible with the committed dependencies.
+Use Node.js 22 or newer. The security maintenance branch upgrades Next.js to 16.4.0, React to 19 and Tailwind CSS to 4.
 
 ```powershell
 npm ci
@@ -59,6 +59,7 @@ Open http://localhost:3000. Supabase schema/storage policies and the required n8
 - [Verification and status](docs/VERIFICATION.md)
 - [Development roadmap](docs/ROADMAP.md)
 - [Security](SECURITY.md)
+- [Security upgrade and local verification](docs/SECURITY-UPGRADE.md)
 - [Contributing](CONTRIBUTING.md)
 
 ## Repository structure
