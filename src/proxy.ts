@@ -2,7 +2,7 @@ import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 import { getSupabaseConfig, isSupabaseConfigured } from '@/lib/supabase/config';
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   if (!isSupabaseConfigured()) return NextResponse.redirect(new URL('/auth', request.url));
   let response = NextResponse.next({ request });
   const { url, key } = getSupabaseConfig();

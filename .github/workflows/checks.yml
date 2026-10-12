@@ -19,5 +19,6 @@ jobs:
       - run: node scripts/check-repository.js
       - run: node --test scripts/check-repository.test.js
       - run: npm ci
+      - run: npm audit --audit-level=moderate
       - run: npm run type-check
       - run: npm run build

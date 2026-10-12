@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 :root { --ink: #122b35; --muted: #607278; --mint: #c4f1d2; --line: #e2e8e5; }
 html { scroll-behavior: smooth; }
